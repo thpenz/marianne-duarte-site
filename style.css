@@ -100,7 +100,8 @@ img { max-width: 100%; display: block; }
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 16px 24px;
+  width: 100%;
+  padding: 16px clamp(24px, 4vw, 64px);
 }
 .navbar-brand {
   font-family: var(--serif);
@@ -148,7 +149,7 @@ img { max-width: 100%; display: block; }
   position: relative;
   background: var(--navy);
   overflow: hidden;
-  min-height: 720px;
+  min-height: 860px;
   display: flex;
   align-items: center;
   padding-top: 88px;
@@ -187,7 +188,10 @@ img { max-width: 100%; display: block; }
   position: relative;
   z-index: 1;
   width: 100%;
-  padding: 64px clamp(24px, 6vw, 96px);
+  padding-top: 64px;
+  padding-bottom: 64px;
+  padding-right: clamp(24px, 6vw, 96px);
+  padding-left: clamp(56px, 11vw, 160px);
 }
 .hero-copy { max-width: 560px; }
 .kicker {
